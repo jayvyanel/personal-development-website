@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E3F2FD;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #0288D1;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding-bottom: 60px; /* Space for the footer */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0288D1;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
