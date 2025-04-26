@@ -1002,17 +1002,22 @@ body {
   padding: 20px;
 }
 
-/* ===== Signup Container ===== */
+/* ========================== */
+/*         Signup Page         */
+/* ========================== */
+
+/* ===== Container ===== */
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  background: linear-gradient(to bottom right, #eef2f3, #8e9eab);
 }
 
 .signup-box {
-  background: white;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
@@ -1067,7 +1072,7 @@ body {
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
-/* ===== Password Group ===== */
+/* ===== Password Visibility ===== */
 .password-group {
   position: relative;
 }
@@ -1085,12 +1090,12 @@ body {
   color: #3498db;
 }
 
-/* ===== Button Styles ===== */
+/* ===== Buttons ===== */
 .btn-primary {
   width: 100%;
   padding: 12px;
   background-color: #3498db;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -1112,7 +1117,7 @@ body {
   cursor: not-allowed;
 }
 
-/* ===== Spinner ===== */
+/* ===== Spinner Animation ===== */
 .spinner {
   display: none;
 }
@@ -1130,7 +1135,7 @@ body {
   display: none;
 }
 
-/* ===== Divider ===== */
+/* ===== Divider Line ===== */
 .divider {
   display: flex;
   align-items: center;
@@ -1173,7 +1178,7 @@ body {
 }
 
 .google-signin-btn {
-  background-color: white;
+  background-color: #fff;
   color: #2c3e50;
   border: 1px solid #ddd;
 }
@@ -1185,7 +1190,7 @@ body {
 
 .facebook-login {
   background-color: #1877f2;
-  color: white;
+  color: #fff;
   border: none;
 }
 
@@ -1194,8 +1199,8 @@ body {
 }
 
 .apple-login {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   border: none;
 }
 
@@ -1203,7 +1208,7 @@ body {
   background-color: #333;
 }
 
-/* ===== Login Link ===== */
+/* ===== Login Link Text ===== */
 .signup-box p {
   text-align: center;
   margin-top: 1.5rem;
@@ -1220,13 +1225,104 @@ body {
   text-decoration: underline;
 }
 
-/* ===== Responsive Adjustments ===== */
+/* ===== Responsive Design ===== */
 @media (max-width: 480px) {
   .signup-box {
     padding: 1.5rem;
   }
-  
+
   .signup-box h1 {
     font-size: 1.5rem;
   }
+}
+
+
+/* ✨ LOGIN PAGE CSS ✨ */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.error-message {
+  color: red;
+  background: #ffe0e0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.spinner {
+  display: inline-block;
+  margin-left: 10px;
 }
