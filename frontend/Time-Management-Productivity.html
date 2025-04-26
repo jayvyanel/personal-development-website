@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Time Management Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Time Management Mastery</h1>
+
+    <section class="module">
+      <h2>Module 1: Fundamentals of Time Management</h2>
+      <p>Learn the core principles of effective time management, including goal setting, prioritization, and overcoming procrastination.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/oTugjssqOT0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a href="documents/time-management-fundamentals.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: The Eisenhower Matrix</h2>
+      <p>Master the Eisenhower Matrix technique to prioritize tasks based on urgency and importance for maximum productivity.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/tTdYX5VIelE" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/eisenhower-matrix.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Pomodoro Technique</h2>
+      <p>Discover how to implement the Pomodoro Technique to maintain focus and prevent burnout through structured work intervals.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/mNBmG24djoY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/pomodoro-technique.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Task Batching & Time Blocking</h2>
+      <p>Learn how to group similar tasks together and allocate specific time blocks to dramatically increase efficiency.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/i3PO5gqHlYI" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/task-batching.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Digital Tools for Productivity</h2>
+      <p>Explore the best digital tools and apps that can help you track, manage, and optimize your time effectively.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9q5N6H7Hn9M" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/digital-tools.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Overcoming Procrastination</h2>
+      <p>Understand the psychology behind procrastination and learn practical strategies to overcome it permanently.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VA8D1cGW5Qk" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/overcoming-procrastination.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Work-Life Balance</h2>
+      <p>Learn how to effectively balance professional responsibilities with personal life for sustainable productivity.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/zU62hh3DB2s" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/work-life-balance.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Time Management Assessment</h2>
+      <form id="time-management-test">
+        <div class="question">
+          <p>1. Which quadrant in the Eisenhower Matrix contains tasks that are important but not urgent?</p>
+          <label><input type="radio" name="q1" value="correct" /> Quadrant 2</label><br>
+          <label><input type="radio" name="q1" value="wrong" /> Quadrant 1</label>
+          <label><input type="radio" name="q1" value="wrong" /> Quadrant 3</label>
+        </div>
+
+        <div class="question">
+          <p>2. The standard work interval in the Pomodoro Technique is:</p>
+          <label><input type="radio" name="q2" value="wrong" /> 30 minutes</label><br>
+          <label><input type="radio" name="q2" value="correct" /> 25 minutes</label>
+          <label><input type="radio" name="q2" value="wrong" /> 45 minutes</label>
+        </div>
+
+        <div class="question">
+          <p>3. Task batching is most effective for:</p>
+          <label><input type="radio" name="q3" value="correct" /> Similar, repetitive tasks</label><br>
+          <label><input type="radio" name="q3" value="wrong" /> Creative brainstorming</label>
+          <label><input type="radio" name="q3" value="wrong" /> Emergency situations</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("time-management-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("time-management-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("time-management-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("time-management-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("time-management-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("time-management-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("time-management-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("time-management-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/time-management-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Development Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Personal Development Academy</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <button class="cta-button" onclick="location.href='register.html'">Get Started</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlock Your Potential with Learning</h1>
+      <p>Join thousands of learners and master new skills with expert-led courses.</p>
+      <button class="explore-btn" onclick="location.href='courses.html'">Start Learning</button>
+    </div>
+    <img src="sc.png" alt="Welcome Image" class="hero-image">
+  </section>
+
+  <!-- Why Choose Us (Vertical Cards) -->
+  <section class="why-choose">
+    <h2>Why Choose Our Academy?</h2>
+
+    <div class="why-vertical-card">
+      <img src="ssc.png" alt="Expert Tutors">
+      <div>
+        <h3>Expert Tutors</h3>
+        <p>Learn from professionals with years of real-world experience.</p>
+      </div>
+    </div>
+
+    <div class="why-vertical-card">
+      <img src="ppp.png" alt="Flexible Learning">
+      <div>
+        <h3>Flexible Learning</h3>
+        <p>Access materials anytime, anywhere, and learn at your pace.</p>
+      </div>
+    </div>
+
+    <div class="why-vertical-card">
+      <img src="certificate.png" alt="Certification">
+      <div>
+        <h3>Recognized Certification</h3>
+        <p>Earn certificates that boost your career profile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <section class="success-stories">
+    <h2>Success Stories</h2>
+
+    <div class="why-vertical-card">
+      <img src="student1.jpg" alt="Student 1">
+      <div>
+        <p>"I gained confidence and landed a job after taking the public speaking course!"</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </div>
+
+    <div class="why-vertical-card">
+      <img src="student2.jpg" alt="Student 2">
+      <div>
+        <p>"Leadership training helped me lead my team more effectively."</p>
+        <h4>- Daniel M.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Experts -->
+  <section class="meet-experts">
+    <h2>Meet the Experts</h2>
+
+    <div class="why-vertical-card">
+      <img src="expert1.jpg" alt="John Doe">
+      <div>
+        <h3>John Doe</h3>
+        <p>Specialist in public speaking and executive coaching.</p>
+      </div>
+    </div>
+
+    <div class="why-vertical-card">
+      <img src="expert2.jpg" alt="Jane Smith">
+      <div>
+        <h3>Jane Smith</h3>
+        <p>Renowned for leadership and entrepreneurship training.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot (Fixed Version) -->
+  <div id="chatbot">
+    <button class="chatbot-button" onclick="toggleChat()">💬 Chat with us</button>
+    
+    <div class="chatbox" id="chatbox" style="display: none;">
+      <div class="chat-header">
+        <h3>Chat Support</h3>
+        <button onclick="toggleChat()">✖</button>
+      </div>
+      <div class="chat-body">
+        <p>Welcome! How can I assist you?</p>
+        <div id="chat-options">
+          <button onclick="handleChatOption('courses')">📚 Ask about courses</button>
+          <button onclick="handleChatOption('register')">📝 Registration help</button>
+          <button onclick="handleChatOption('contact')">📞 Contact us</button>
+        </div>
+        <div id="chat-response" style="margin-top: 10px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Personal Development Academy. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Chatbot JS -->
+  <script>
+    function toggleChat() {
+      const chatbox = document.getElementById('chatbox');
+      chatbox.style.display = (chatbox.style.display === 'none') ? 'block' : 'none';
+    }
+
+    function handleChatOption(option) {
+      const responseBox = document.getElementById('chat-response');
+      if (option === 'courses') {
+        responseBox.innerHTML = "Check out our <a href='courses.html'>courses</a> page to explore all available options!";
+      } else if (option === 'register') {
+        responseBox.innerHTML = "You can register easily by visiting the <a href='register.html'>registration page</a>.";
+      } else if (option === 'contact') {
+        responseBox.innerHTML = "Feel free to <a href='contact.html'>contact us here</a>.";
+      }
+    }
+  </script>
+
+</body>
+</html>

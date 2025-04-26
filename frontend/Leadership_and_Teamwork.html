@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leadership Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Leadership Essentials</h1>
+
+    <section class="module">
+      <h2>Module 1: Introduction to Leadership</h2>
+      <p>This video provides a foundational understanding of what leadership means, the key traits of successful leaders, and how leadership impacts team dynamics and organizational success.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/LZGZDRcLQTk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a href="documents/introduction-to-leadership.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: Leadership Styles</h2>
+      <p>Explore various leadership styles including democratic, autocratic, and transformational, and learn how to adapt your style depending on the team and situation.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/FGEVL19AaGA" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/leadership-styles.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Strategic Communication</h2>
+      <p>Learn the importance of clear, concise, and purposeful communication, especially in high-stakes leadership scenarios and team alignment.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/3y1WyMpPmME" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/strategic-communication.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Decision Making Frameworks</h2>
+      <p>This module discusses various decision-making frameworks that leaders can use to evaluate choices, manage risk, and drive better results.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PTyrfo_J9Xg" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/decision-making.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Conflict Resolution Strategies</h2>
+      <p>Gain insights into resolving interpersonal conflicts in teams through constructive dialogue, empathy, and mediation techniques.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/WbCxRMBFRFA" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/conflict-resolution.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Team Motivation Systems</h2>
+      <p>Understand how leaders can inspire and maintain high morale using intrinsic and extrinsic motivational techniques.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/0MhOT2pkKZ4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/team-motivation.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Ethical Leadership Practice</h2>
+      <p>This video explores ethics in leadership, covering accountability, transparency, and leading with integrity in complex situations.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/yW9HBiBPYBw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/ethical-leadership.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Leadership Competency Assessment</h2>
+      <form id="leadership-test">
+        <div class="question">
+          <p>1. According to Situational Leadership Theory, which style is best for highly capable but insecure team members?</p>
+          <label><input type="radio" name="q1" value="correct" /> Coaching</label><br>
+          <label><input type="radio" name="q1" value="wrong" /> Delegating</label>
+          <label><input type="radio" name="q1" value="wrong" /> Directing</label>
+        </div>
+
+        <div class="question">
+          <p>2. Which communication model emphasizes context and relationship aspects?</p>
+          <label><input type="radio" name="q2" value="wrong" /> Shannon-Weaver</label><br>
+          <label><input type="radio" name="q2" value="correct" /> Transactional</label>
+          <label><input type="radio" name="q2" value="wrong" /> Linear</label>
+        </div>
+
+        <div class="question">
+          <p>3. In ethical decision-making, the "Greater Good" principle aligns with:</p>
+          <label><input type="radio" name="q3" value="correct" /> Utilitarianism</label><br>
+          <label><input type="radio" name="q3" value="wrong" /> Deontology</label>
+          <label><input type="radio" name="q3" value="wrong" /> Virtue Ethics</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("leadership-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("leadership-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("leadership-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("leadership-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("leadership-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("leadership-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("leadership-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("leadership-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/leadership-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

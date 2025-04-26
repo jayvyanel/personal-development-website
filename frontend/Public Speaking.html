@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Public Speaking Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Public Speaking Mastery</h1>
+
+    <section class="module">
+      <h2>Module 1: Fundamentals of Public Speaking</h2>
+      <p>Understand the core principles of effective public speaking, including audience awareness, vocal delivery, and body language.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/tShavGuo0_E" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/public-speaking-fundamentals.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: Crafting Your Message</h2>
+      <p>Learn how to structure your speech, write compelling openings and closings, and keep your message clear and engaging.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/gDqT4F2tMN8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/crafting-message.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Voice Control & Pacing</h2>
+      <p>Develop techniques to improve vocal tone, manage pace, and use pauses effectively for dramatic impact.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBBivW0OHA" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/voice-control.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Body Language in Presentations</h2>
+      <p>Explore how non-verbal communication, including gestures, eye contact, and posture, enhances your message.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/GI4uwT-JC0s" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/body-language.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Handling Nervousness</h2>
+      <p>Discover strategies to manage anxiety and deliver speeches with confidence and calm.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/a2MR5XbJtXU" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/handling-nervousness.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Audience Engagement Techniques</h2>
+      <p>Learn how to read the room, encourage participation, and adapt dynamically to audience feedback.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/xOeJp-k1KKo" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/audience-engagement.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Using Visual Aids Effectively</h2>
+      <p>Understand best practices for integrating slides, props, and multimedia into your speech without distraction.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ERB7ITvabA4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/visual-aids.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Public Speaking Knowledge Check</h2>
+      <form id="public-speaking-test">
+        <div class="question">
+          <p>1. Which of the following helps manage speaking anxiety effectively?</p>
+          <label><input type="radio" name="q1" value="correct" /> Deep breathing and preparation</label><br>
+          <label><input type="radio" name="q1" value="wrong" /> Speaking without rehearsal</label>
+          <label><input type="radio" name="q1" value="wrong" /> Ignoring the audience</label>
+        </div>
+
+        <div class="question">
+          <p>2. What is the ideal way to open a speech?</p>
+          <label><input type="radio" name="q2" value="wrong" /> With dense statistics</label><br>
+          <label><input type="radio" name="q2" value="correct" /> With a hook or engaging story</label>
+          <label><input type="radio" name="q2" value="wrong" /> Jump straight to your conclusion</label>
+        </div>
+
+        <div class="question">
+          <p>3. Effective body language includes:</p>
+          <label><input type="radio" name="q3" value="correct" /> Open gestures and eye contact</label><br>
+          <label><input type="radio" name="q3" value="wrong" /> Reading from notes</label>
+          <label><input type="radio" name="q3" value="wrong" /> Avoiding the audience's gaze</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("public-speaking-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("public-speaking-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("public-speaking-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("public-speaking-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("public-speaking-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("public-speaking-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("public-speaking-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("public-speaking-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/public-speaking-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

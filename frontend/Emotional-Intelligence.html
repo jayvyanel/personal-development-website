@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emotional Intelligence Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Emotional Intelligence Mastery</h1>
+
+    <section class="module">
+      <h2>Module 1: Introduction to Emotional Intelligence</h2>
+      <p>Learn what emotional intelligence is, why it matters, and how it differs from IQ in personal and professional success.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Y7m9eNoB3NU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a href="documents/ei-introduction.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: Self-Awareness</h2>
+      <p>Develop the ability to recognize and understand your own emotions and how they affect your thoughts and behavior.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/D6_J7FfgWVc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/self-awareness.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Self-Regulation</h2>
+      <p>Learn techniques to manage disruptive emotions and impulses, and to adapt to changing circumstances.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/0k8kDk6mUVw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/self-regulation.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Motivation</h2>
+      <p>Discover how to harness your emotions to pursue goals with energy and persistence.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/GxEpc4YQ5oI" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/motivation.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Empathy</h2>
+      <p>Develop the ability to understand the emotional makeup of other people and respond appropriately.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1Evwgu369Jw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/empathy.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Social Skills</h2>
+      <p>Learn how to manage relationships and build networks by finding common ground and building rapport.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/btO1M7x_TDE" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/social-skills.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Applying EI in the Workplace</h2>
+      <p>Practical strategies for using emotional intelligence to enhance leadership, teamwork, and workplace relationships.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/BgQPve6OhpU" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/ei-workplace.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Emotional Intelligence Assessment</h2>
+      <form id="ei-test">
+        <div class="question">
+          <p>1. Which of these is NOT one of the five components of emotional intelligence?</p>
+          <label><input type="radio" name="q1" value="wrong" /> Self-awareness</label><br>
+          <label><input type="radio" name="q1" value="correct" /> Memory retention</label>
+          <label><input type="radio" name="q1" value="wrong" /> Social skills</label>
+        </div>
+
+        <div class="question">
+          <p>2. The ability to recognize and understand your own emotions is called:</p>
+          <label><input type="radio" name="q2" value="correct" /> Self-awareness</label><br>
+          <label><input type="radio" name="q2" value="wrong" /> Self-regulation</label>
+          <label><input type="radio" name="q2" value="wrong" /> Empathy</label>
+        </div>
+
+        <div class="question">
+          <p>3. Which component of EI helps in managing conflicts effectively?</p>
+          <label><input type="radio" name="q3" value="wrong" /> Motivation</label><br>
+          <label><input type="radio" name="q3" value="correct" /> Social skills</label>
+          <label><input type="radio" name="q3" value="wrong" /> Self-awareness</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("ei-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("ei-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("ei-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("ei-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("ei-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("ei-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("ei-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("ei-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/ei-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Effective Communication Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Effective Communication</h1>
+
+    <section class="module">
+      <h2>Module 1: Communication Fundamentals</h2>
+      <p>Learn the basic principles of effective communication, including the communication process, barriers, and how to overcome them.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/HAnw168huqA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a href="documents/communication-fundamentals.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: Active Listening Skills</h2>
+      <p>Master the art of active listening to improve understanding, build better relationships, and avoid misunderstandings.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/R1vskiVDwl4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/active-listening.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Nonverbal Communication</h2>
+      <p>Understand how body language, facial expressions, and tone of voice impact your message and how to use them effectively.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZWnH9W-0kIQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/nonverbal-communication.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Public Speaking Techniques</h2>
+      <p>Learn strategies to overcome public speaking anxiety and deliver compelling presentations with confidence.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/a2MR5XbJtXU" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/public-speaking.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Written Communication</h2>
+      <p>Improve your professional writing skills for emails, reports, and other business documents.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/e7Lc6jpx3U4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/written-communication.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Difficult Conversations</h2>
+      <p>Learn techniques for handling challenging discussions with colleagues, managers, and clients professionally.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/J4k_faAQZSo" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/difficult-conversations.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Cross-Cultural Communication</h2>
+      <p>Understand how cultural differences affect communication and learn strategies for effective intercultural interactions.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/0W9iLrfyq20" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/cross-cultural-communication.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Communication Skills Assessment</h2>
+      <form id="communication-test">
+        <div class="question">
+          <p>1. Which of these is NOT a component of active listening?</p>
+          <label><input type="radio" name="q1" value="wrong" /> Paraphrasing</label><br>
+          <label><input type="radio" name="q1" value="correct" /> Multitasking</label>
+          <label><input type="radio" name="q1" value="wrong" /> Asking clarifying questions</label>
+        </div>
+
+        <div class="question">
+          <p>2. What percentage of communication is estimated to be nonverbal?</p>
+          <label><input type="radio" name="q2" value="wrong" /> 30-40%</label><br>
+          <label><input type="radio" name="q2" value="correct" /> 70-90%</label>
+          <label><input type="radio" name="q2" value="wrong" /> 50-60%</label>
+        </div>
+
+        <div class="question">
+          <p>3. The "STAR" method in communication stands for:</p>
+          <label><input type="radio" name="q3" value="correct" /> Situation, Task, Action, Result</label><br>
+          <label><input type="radio" name="q3" value="wrong" /> Speak, Think, Act, Review</label>
+          <label><input type="radio" name="q3" value="wrong" /> Story, Time, Audience, Response</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("communication-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("communication-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("communication-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("communication-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("communication-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("communication-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("communication-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("communication-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/communication-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

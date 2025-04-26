@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Personal Development Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://js.stripe.com/v3/"></script> <!-- For card payments -->
+    <script src="payment.js" defer></script>
+</head>
+<body>
+    <header class="header-transparent">
+        <nav>
+            <a href="choose-plan.html" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Plans</a>
+        </nav>
+        <div class="user-profile">
+            <img src="images/profile.png" alt="User" class="profile-icon">
+            <span id="username">Guest</span>
+        </div>
+    </header>
+
+    <main class="payment-page">
+        <div class="payment-container">
+            <h1>Complete Your Purchase</h1>
+            <p class="subtitle">Get unlimited access to all premium courses</p>
+            
+            <div class="price-display">
+                <span class="amount">₹1499</span>
+                <span class="billing-cycle">/month</span>
+                <p class="tax-info">+ GST as applicable</p>
+            </div>
+
+            <!-- Payment Methods Tabs -->
+            <div class="payment-methods">
+                <button class="method-tab active" data-method="upi">
+                    <i class="fas fa-mobile-alt"></i> UPI
+                </button>
+                <button class="method-tab" data-method="card">
+                    <i class="far fa-credit-card"></i> Credit/Debit Card
+                </button>
+            </div>
+
+            <!-- UPI Payment Section -->
+            <div class="payment-section upi-payment active">
+                <div class="upi-apps">
+                    <button class="upi-app" data-app="gpay">
+                        <img src="images/gpay.png" alt="Google Pay">
+                    </button>
+                    <button class="upi-app" data-app="phonepe">
+                        <img src="images/phonepe.png" alt="PhonePe">
+                    </button>
+                    <button class="upi-app" data-app="paytm">
+                        <img src="images/paytm.png" alt="Paytm">
+                    </button>
+                    <button class="upi-app" data-app="other">
+                        Other UPI Apps
+                    </button>
+                </div>
+                
+                <div class="upi-form">
+                    <div class="form-group">
+                        <label for="upi-id">Enter UPI ID</label>
+                        <input type="text" id="upi-id" placeholder="yourname@upi">
+                    </div>
+                    <button class="pay-now-btn" id="upi-pay-btn">Pay via UPI</button>
+                </div>
+                
+                <div class="upi-qr hidden">
+                    <img src="images/upi-qr.png" alt="Scan to Pay">
+                    <p>Scan this QR code with any UPI app</p>
+                </div>
+            </div>
+
+            <!-- Card Payment Section -->
+            <div class="payment-section card-payment">
+                <div class="card-form" id="card-element">
+                    <!-- Stripe Elements will be inserted here -->
+                </div>
+                <div id="card-errors" role="alert"></div>
+                <button class="pay-now-btn" id="card-pay-btn">Pay ₹1499</button>
+            </div>
+            
+            <div class="security-info">
+                <i class="fas fa-lock"></i>
+                <span>Secure payment encrypted with SSL</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Payment Processing Overlay -->
+    <div class="payment-overlay hidden">
+        <div class="payment-processing">
+            <div class="spinner"></div>
+            <h3>Processing Payment...</h3>
+            <p>Please don't close this window</p>
+        </div>
+    </div>
+
+    <!-- Payment Success Modal -->
+    <div class="payment-modal hidden" id="success-modal">
+        <div class="modal-content">
+            <div class="success-check">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Payment Successful!</h2>
+            <p>You now have full access to all premium courses</p>
+            <button class="view-courses-btn" id="view-courses-btn">View Premium Courses</button>
+        </div>
+    </div>
+</body>
+</html>

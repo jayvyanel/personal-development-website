@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Critical Thinking & Decision Making Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Critical Thinking & Decision Making</h1>
+
+    <section class="module">
+      <h2>Module 1: Foundations of Critical Thinking</h2>
+      <p>Learn the core principles of critical thinking, including how to analyze arguments, identify biases, and evaluate evidence.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dItUGF8GdTw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a href="documents/critical-thinking-foundations.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: Cognitive Biases</h2>
+      <p>Explore common cognitive biases that affect our thinking and learn strategies to overcome them.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/wEwGBIr_RIw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/cognitive-biases.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Logical Fallacies</h2>
+      <p>Identify and avoid common logical fallacies that can undermine reasoning and decision making.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1N3TROA8MYY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/logical-fallacies.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Problem Solving Frameworks</h2>
+      <p>Learn structured approaches to problem solving including the IDEAL and PDCA models.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/6eJ5T7Ks3-Q" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/problem-solving-frameworks.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Decision Making Models</h2>
+      <p>Explore various decision making models including rational, intuitive, and recognition-primed decision making.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9X_5wv9Jk3w" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/decision-making-models.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Evidence Evaluation</h2>
+      <p>Learn how to assess the quality of evidence, distinguish correlation from causation, and identify reliable sources.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/GEGQ-5nqW6c" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/evidence-evaluation.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Applying Critical Thinking at Work</h2>
+      <p>Practical strategies for applying critical thinking skills in professional settings and team environments.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9G8GALFGAmc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/applied-critical-thinking.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Critical Thinking Assessment</h2>
+      <form id="ct-test">
+        <div class="question">
+          <p>1. Which of these is NOT a characteristic of critical thinking?</p>
+          <label><input type="radio" name="q1" value="wrong" /> Open-mindedness</label><br>
+          <label><input type="radio" name="q1" value="correct" /> Automatic acceptance of authority</label>
+          <label><input type="radio" name="q1" value="wrong" /> Systematic evaluation</label>
+        </div>
+
+        <div class="question">
+          <p>2. The tendency to favor information that confirms our existing beliefs is called:</p>
+          <label><input type="radio" name="q2" value="correct" /> Confirmation bias</label><br>
+          <label><input type="radio" name="q2" value="wrong" /> Hindsight bias</label>
+          <label><input type="radio" name="q2" value="wrong" /> Availability heuristic</label>
+        </div>
+
+        <div class="question">
+          <p>3. Which decision-making model is most appropriate for complex, high-stakes situations?</p>
+          <label><input type="radio" name="q3" value="wrong" /> Intuitive model</label><br>
+          <label><input type="radio" name="q3" value="correct" /> Rational model</label>
+          <label><input type="radio" name="q3" value="wrong" /> Recognition-primed model</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("ct-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("ct-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("ct-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("ct-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("ct-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("ct-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("ct-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("ct-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/ct-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

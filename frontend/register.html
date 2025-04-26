@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - E-Learning</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <main class="signup-container">
+    <div class="signup-box">
+      <h1>Create Your Account</h1>
+      <div id="error-message" class="error-message" style="display:none;"></div>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+        </div>
+
+        <div class="form-group password-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a strong password" required autocomplete="new-password" />
+          <span class="password-toggle"><i class="fas fa-eye"></i></span>
+        </div>
+
+        <div class="form-group password-group">
+  <label for="confirm-password">Confirm Password</label>
+  <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required />
+</div>
+
+
+        <button type="submit" class="btn-primary" id="submit-btn">
+          <span class="btn-text">Sign Up</span>
+          <span class="spinner hidden"><i class="fas fa-spinner fa-spin"></i></span>
+        </button>
+      </form>
+
+      <div class="divider">or</div>
+
+      <button class="google-signin-btn"><i class="fab fa-google"></i> Sign up with Google</button>
+      <button class="facebook-login"><i class="fab fa-facebook"></i> Sign up with Facebook</button>
+      <button class="apple-login"><i class="fab fa-apple"></i> Sign up with Apple</button>
+
+      <p>Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </main>
+
+  <script type="module" src="register.js"></script>
+</body>
+</html>

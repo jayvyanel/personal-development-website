@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance & Money Management Course</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .course-container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    .module { margin-bottom: 40px; }
+    .video-container { margin: 15px 0; }
+    .action-btn { padding: 10px 15px; margin: 10px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .action-btn:disabled { background-color: #aaa; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+    .modal.hidden { display: none; }
+    .modal-content { background: white; padding: 20px; border-radius: 5px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="course-container">
+    <h1>Personal Finance & Money Management</h1>
+
+    <section class="module">
+      <h2>Module 1: Financial Foundations</h2>
+      <p>Learn the basic principles of personal finance including budgeting, saving, and understanding your financial health.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/5-8nQZgC0AU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a href="documents/financial-foundations.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 2: Budgeting Strategies</h2>
+      <p>Discover different budgeting methods and find the one that works best for your lifestyle and financial goals.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/6UaEF6DOVoo" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/budgeting-strategies.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 3: Debt Management</h2>
+      <p>Learn strategies to pay off debt efficiently and avoid common debt traps.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/5M6p3C7lxHQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/debt-management.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 4: Smart Saving</h2>
+      <p>Understand how to build an emergency fund and save for short-term and long-term goals.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/U3iJK1Yg4L4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/smart-saving.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 5: Investing Basics</h2>
+      <p>Introduction to investing concepts including stocks, bonds, mutual funds, and retirement accounts.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jc1XQvX0u7E" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/investing-basics.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 6: Credit & Loans</h2>
+      <p>Learn how credit scores work, how to build good credit, and how to use loans wisely.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/uwgB-bXjZaA" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/credit-loans.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <section class="module">
+      <h2>Module 7: Financial Planning</h2>
+      <p>Create a comprehensive financial plan that aligns with your life goals and risk tolerance.</p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/tZdM6s-IsQ4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="documents/financial-planning.pdf" download>📄 Download Notes</a>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section id="test-section">
+      <h2>Financial Literacy Assessment</h2>
+      <form id="pf-test">
+        <div class="question">
+          <p>1. Which budgeting method allocates 50% to needs, 30% to wants, and 20% to savings?</p>
+          <label><input type="radio" name="q1" value="wrong" /> Zero-based budgeting</label><br>
+          <label><input type="radio" name="q1" value="correct" /> 50/30/20 rule</label>
+          <label><input type="radio" name="q1" value="wrong" /> Envelope system</label>
+        </div>
+
+        <div class="question">
+          <p>2. What is the recommended size for an emergency fund?</p>
+          <label><input type="radio" name="q2" value="wrong" /> 1 month of expenses</label><br>
+          <label><input type="radio" name="q2" value="correct" /> 3-6 months of expenses</label>
+          <label><input type="radio" name="q2" value="wrong" /> 1 year of income</label>
+        </div>
+
+        <div class="question">
+          <p>3. Which debt repayment strategy focuses on paying the smallest debts first?</p>
+          <label><input type="radio" name="q3" value="correct" /> Snowball method</label><br>
+          <label><input type="radio" name="q3" value="wrong" /> Avalanche method</label>
+          <label><input type="radio" name="q3" value="wrong" /> Blizzard method</label>
+        </div>
+
+        <button type="submit" class="action-btn">Submit Assessment</button>
+      </form>
+      <p id="test-result"></p>
+    </section>
+
+    <!-- COURSE ACTIONS -->
+    <div class="course-actions">
+      <button id="mark-complete" class="action-btn">Mark as Complete</button>
+      <button class="action-btn" onclick="scrollToTest()">Take Assessment</button>
+      <button id="download-certificate" class="action-btn" disabled>Download Certification</button>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Confirm course completion?</p>
+      <button id="confirm-yes">Confirm</button>
+      <button id="confirm-no">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markCompleteBtn = document.getElementById("mark-complete");
+      const downloadCertificateBtn = document.getElementById("download-certificate");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes");
+      const confirmNoBtn = document.getElementById("confirm-no");
+      const testForm = document.getElementById("pf-test");
+      const testResult = document.getElementById("test-result");
+
+      const isCourseComplete = localStorage.getItem("pf-course-complete") === "true";
+      const testScore = parseFloat(localStorage.getItem("pf-test-score")) || 0;
+
+      if (isCourseComplete && testScore >= 70) {
+        markCompleteBtn.disabled = true;
+        downloadCertificateBtn.disabled = false;
+      }
+
+      markCompleteBtn.addEventListener("click", function () {
+        confirmationModal.classList.remove("hidden");
+      });
+
+      confirmYesBtn.addEventListener("click", function () {
+        localStorage.setItem("pf-course-complete", "true");
+        markCompleteBtn.disabled = true;
+        if (testScore >= 70) downloadCertificateBtn.disabled = false;
+        confirmationModal.classList.add("hidden");
+        alert("Course completion recorded!");
+      });
+
+      confirmNoBtn.addEventListener("click", function () {
+        confirmationModal.classList.add("hidden");
+      });
+
+      testForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let score = 0;
+        const totalQuestions = 3;
+        const answers = new FormData(testForm);
+        for (let [question, answer] of answers.entries()) {
+          if (answer === "correct") score++;
+        }
+        const percent = (score / totalQuestions) * 100;
+        testResult.textContent = `Assessment Score: ${percent}%`;
+        localStorage.setItem("pf-test-score", percent);
+
+        if (percent >= 70) {
+          alert("Success! Certificate available after course completion.");
+          if (localStorage.getItem("pf-course-complete") === "true") {
+            downloadCertificateBtn.disabled = false;
+          }
+        } else {
+          alert("Retake required: Score below 70%");
+        }
+      });
+
+      downloadCertificateBtn.addEventListener("click", function () {
+        const courseComplete = localStorage.getItem("pf-course-complete") === "true";
+        const testScore = parseFloat(localStorage.getItem("pf-test-score")) || 0;
+        if (courseComplete && testScore >= 70) {
+          window.location.href = "certificate/pf-certificate.pdf";
+        } else {
+          alert("Requirements: Course completion + 70% assessment score");
+        }
+      });
+    });
+
+    function scrollToTest() {
+      document.getElementById("test-section").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
